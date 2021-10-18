@@ -22,8 +22,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	implementation 'org.projectlombok:lombok:1.18.16'
-	implementation 'org.spockframework:spock-core'
-	implementation 'org.spockframework:spock-core'
 	implementation 'org.testng:testng:7.1.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
@@ -40,4 +38,11 @@ dependencyManagement {
 
 test {
 	useJUnitPlatform()
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.exchange.guslikProj.GusliProjApplication'
+	}
+
 }
